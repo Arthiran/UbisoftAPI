@@ -35,18 +35,8 @@ void Init()
 {
 	//------------------------------------------------------------------------
 	// Example Sprite Code....
-	
 
-	/*testSprite = App::CreateSprite(".\\TestData\\Test.bmp", 8, 4);
-	testSprite->SetPosition(400.0f, 400.0f);
-	float speed = 1.0f / 15.0f;
-	testSprite->CreateAnimation(ANIM_BACKWARDS, speed, { 0,1,2,3,4,5,6,7 });
-	testSprite->CreateAnimation(ANIM_LEFT, speed, { 8,9,10,11,12,13,14,15 });
-	testSprite->CreateAnimation(ANIM_RIGHT, speed, { 16,17,18,19,20,21,22,23 });
-	testSprite->CreateAnimation(ANIM_FORWARDS, speed, { 24,25,26,27,28,29,30,31 });
-	testSprite->SetScale(2.0f);
-
-	testSprite2 = App::CreateSprite(".\\TestData\\Ships.bmp", 2, 12);
+	/*testSprite2 = App::CreateSprite(".\\TestData\\Ships.bmp", 2, 12);
 	testSprite2->SetPosition(400.0f, 400.0f);	
 	testSprite2->SetFrame(2);
 	testSprite2->SetScale(1.0f);*/
@@ -98,47 +88,6 @@ void Update(float deltaTime)
 		Boxathan->SetPosition(x, y);
 	}
 
-
-	/*if (App::GetController().GetLeftThumbStickY() > 0.5f)
-	{
-		Boxathan->SetAnimation(ANIM_FORWARDS);
-		float x, y;
-		Boxathan->GetPosition(x, y);
-		y += 1.0f;
-		Boxathan->SetPosition(x, y);
-	}
-	if (App::GetController().GetLeftThumbStickY() < -0.5f)
-	{
-		Boxathan->SetAnimation(ANIM_BACKWARDS);
-		float x, y;
-		Boxathan->GetPosition(x, y);
-		y -= 1.0f;
-		Boxathan->SetPosition(x, y);
-	}
-	if (App::GetController().CheckButton(XINPUT_GAMEPAD_DPAD_UP, false))
-	{
-		Boxathan->SetScale(Boxathan->GetScale() + 0.1f);
-	}
-	if (App::GetController().CheckButton(XINPUT_GAMEPAD_DPAD_DOWN, false))
-	{
-		Boxathan->SetScale(Boxathan->GetScale() - 0.1f);
-	}
-	if (App::GetController().CheckButton(XINPUT_GAMEPAD_DPAD_LEFT, false))
-	{
-		Boxathan->SetAngle(Boxathan->GetAngle() + 0.1f);
-	}
-	if (App::GetController().CheckButton(XINPUT_GAMEPAD_DPAD_RIGHT, false))
-	{
-		Boxathan->SetAngle(Boxathan->GetAngle() - 0.1f);
-	}
-	if (App::GetController().CheckButton(XINPUT_GAMEPAD_A, true))
-	{
-		Boxathan->SetAnimation(-1);
-	}
-	if (App::GetController().CheckButton(XINPUT_GAMEPAD_B, true))
-	{
-		Boxathan->SetVertex(0, Boxathan->GetVertex(0) + 5.0f);
-	}*/
 	//------------------------------------------------------------------------
 	// Sample Sound.
 	//------------------------------------------------------------------------
@@ -158,7 +107,7 @@ void Render()
 	//------------------------------------------------------------------------
 	// Example Line Drawing.
 	//------------------------------------------------------------------------
-	static float a = 0.0f;
+	/*static float a = 0.0f;
 	float r = 1.0f;
 	float g = 1.0f;
 	float b = 1.0f;
@@ -173,7 +122,7 @@ void Render()
 		g = (float)i / 20.0f;
 		b = (float)i / 20.0f;
 		App::DrawLine(sx, sy, ex, ey,r,g,b);
-	}
+	}*/
 
 	//------------------------------------------------------------------------
 	// Example Sprite Code....
@@ -185,7 +134,7 @@ void Render()
 	//------------------------------------------------------------------------
 	// Example Text.
 	//------------------------------------------------------------------------
-	App::Print(0, 300, std::to_string(HVelocity).c_str());
+	//App::Print(0, 300, std::to_string(HVelocity).c_str());
 
 }
 //------------------------------------------------------------------------
@@ -196,8 +145,6 @@ void Shutdown()
 {	
 	//------------------------------------------------------------------------
 	// Example Sprite Code....
-	//delete testSprite;
-	//delete testSprite2;
 	delete Boxathan;
 	//------------------------------------------------------------------------
 }
